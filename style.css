@@ -35,7 +35,7 @@ header{
     width: max-content;
     font-family: "OSC" , Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 21px;
     letter-spacing: 0.4px;
     margin: 0px 0px 0px 10px;
 }
@@ -50,8 +50,17 @@ header ul li{
 header ul li a{
     text-decoration: none;
     color: black;
+    font-weight: 600;
+    font-size: 15.5px;
+    letter-spacing: 0.4px;
 }
 
+.product_details{
+    width: 30vw;
+    position:absolute;
+    top: 23vh;
+    left: 4vw;
+}
 
 .brand_logo{
     width: 100px;
@@ -66,39 +75,57 @@ header ul li a{
 }
 .circle1{
     background: linear-gradient(to left bottom, #1eadf080, #0afb5e81);
-    top: 37vh;
-    left: 38vw;
+    top: 42vh;
+    left: 40vw;
 }
 .circle2{
     background: linear-gradient(to right top, #00ffee81, #4500c66e);
-    top: 23vh;
-    left: 45vw;
+    top: 20vh;
+    left: 47vw;
 }
 .laps{
     position: absolute;
     pointer-events: none;
-    height: 450px;
+    height: 550px;
     display: none;
     z-index: 3;
-    top: 28vh;
+    top: 23vh;
     left: 41vw;
 }
 .lap01{
     transform: rotate(10deg);
-    display: block;
+    
 }
 .lap02{
-    border: 1px solid red;
+    display: block;
 }
 .lap03{
     transform: rotate(340deg);
-    border: 1px solid red;
+    
 }
 .lap04{
     transform: rotate(345deg);
-    border: 1px solid red;
+    
 }
 .lap05{
     transform: scaleX(-1) rotate(7deg);
-    border: 1px solid red;
+    
+}
+.counter{
+    position: absolute;
+    bottom: 15vh;
+    right: 15vw;
+    font-size:18px;
+    font-weight: bold;
+}
+.personal_data{
+    position: absolute;
+    bottom: 3vh;
+    left: 4vw;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.5);
+}
+.personal_data span{
+    color: rgb(218, 0, 0);
 }
