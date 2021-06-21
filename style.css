@@ -61,10 +61,10 @@ header ul li a{
     left: 4vw;
 }
 .product_details .brand_logo{
-    width: 70px;
+    width: 80px;
 }
 .product_details h1{
-    margin: -4px 0px 8px;
+    margin: -2px 0px 10px;
     font-size: 28px;
     letter-spacing: 0.8px;
 }
@@ -74,8 +74,11 @@ header ul li a{
     letter-spacing: 0.7px;
 }
 .product_details .description1, .product_details .description2{
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.5px;
+}
+.product_details .explore_product{
+    font-weight: bold;
 }
 .circles{
     width: 370px;
@@ -140,4 +143,5 @@ header ul li a{
 }
 .personal_data span{
     color: rgb(218, 0, 0);
+    opacity: 0.8;
 }
