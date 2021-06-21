@@ -1,25 +1,42 @@
 {"data" : [
     {
-        "brand_route" : "img/",
+        "brand_route" : "img/Asus-Logo.png",
         "tittle" : "Asus A15 Ryzen 7 4800h Gtx 1660 Ti 16g 144h Portatil Gamer",
         "price" : "$5.199.999",
-        "description" : "",
+        "description_1" : "ASUS TUF Gaming A15 Gaming Laptop, 15.6” 144Hz Full HD IPS-Type, AMD Ryzen 7 4800H, GeForce GTX 1660 Ti, 16GB DDR4, 512GB PCIe SSD, 90WHr Battery, RGB Backlit KB, Windows 10 Home, TUF506IU-ES74.",
+        "description_2" : "NVIDIA GeForce GTX 1660 Ti 6GB GDDR6 with ROG Boost 8-core AMD Ryzen 7 4800H Processor 45W (8M Cache, up to 4.2GHz) 15.6'' 144Hz Full HD IPS-Type Display 16GB DDR4 3200MHz RAM | 512GB PCIe NVMe M.2 SSD | Windows 10 Home 90WHr battery | Up to 8.7 hours web browsing and up to 12.3 hours video playback.",
         "route" : "img/Laptop01.png"
     },
     {
-        "tittle" : "Laptop 1",
+        "brand_route" : "img/Lenovo-Logo.png",
+        "tittle" : "Portatil Lenovo Gaming 10300h Gtx 1650 M2 256+1t 8g",
+        "price" : "$3.499.999",
+        "description_1" : "Lenovo IdeaPad Gaming 3 15.6'' Full HD Gaming Notebook Computer, Intel Core i5-10300H 2.5GHz, 8GB RAM, 256GB SSD + 1TB HDD, NVIDIA GeForce GTX 1650 4GB, Windows 10 Home, Onyx Black.",
+        "description_2" : "DIVERSE STYLES, SINGULAR PERFORMANCE Everyday laptops for first-time users. High-performance notebooks for serious gamers. Convertible PCs for those who like their entertainment on the go.",
         "route" : "img/Laptop02.png"
     },
     {
-        "tittle" : "Laptop 1",
+        "brand_route" : "img/hp-Logo.png",
+        "tittle" : "Portatil Gamer HP Pavilion I5 10300h 8gb Gtx 1660ti 144hz",
+        "price" : "$4.090.000",
+        "description_1" : "Procesador core I5 10300h quad core hasta 4.5ghz. Rendimiento superior al i5 9300h, ryzen 3550h, ryzen 3750h, I7 7700hq y esta a nivel de un ryzen 4700u y i7 10710u.",
+        "description_2" : "Memoria ram 8gb Ddr4 (2x4gb) 2933mhz ampliable a 64gb, Con 16gb a 2933mhz sumar 320.000, Unidad de estado solido 512Gb Nvme, Memoria intel optane 32gb, Pantalla 16.1'' full HD 144hz 72% NTSC 300nits pantalla de gran calidad para su precio.",
         "route" : "img/Laptop03.png"
     },
     {
-        "tittle" : "Laptop 1",
+        "brand_route" : "img/Gigabyte-Logo.png",
+        "tittle" : "Portátil Gamer Gigabyte G5 6 Core 16gb 512gb Rtx 3060 240hz",
+        "price" : "$5.890.000",
+        "description_1" : "Procesador Core i5 10500H de seis nucleos hasta 4.5Ghz, Memoria ram 16gb Ddr4 a 3200mhz alta frecuencia ampliable a 64gb, Unidad de estado solido 512gb Nvme, Espacio para una unidad ssd m.2nvme.",
+        "description_2" : "Espacio para un disco duro o ssd de 2.5'', Pantalla 15.6'' full HD 144hz 72%NTSC IPS-level 100%srgb muy buena calidad, Tarjeta de video RTX 3060 6gb tarjeta con rendimiento muy similar a una RTX 2070 de la generacion pasada.",
         "route" : "img/Laptop04.png"
     },
     {
-        "tittle" : "Laptop 1",
+        "brand_route" : "img/Asus-Logo.png",
+        "tittle" : "Portatil Gamer Asus G15 2021 Ryzen 9 5900hx Rtx 3060 144hz",
+        "price" : "$7.690.000",
+        "description_1" : "Procesador 5900HX (3.30 GHz) Octa core 16 hilos hasta 4.6Ghz mejor que cualquier core i9 de portátil, Memoria RAM 16gb Ddr4 a 3200mhz Doble canal y altas frecuiencia, ampliable a 64gb.",
+        "description_2" : "Unidad de estado solido 512 Nvme, Tiene espacio para un SSD M.2 NVME, Pantalla 15.6'', full HD 144hz IPS 72% sRGB 250 Nits con tecnología Adaptive-Sync, Tarjeta de video RTX 3060 6Gb 115w , la tarjeta tiene un Turbo ROG Boost 1802MHz at 115W (130W with Dynamic Boost).",
         "route" : "img/Laptop05.png"
     }
 ]
