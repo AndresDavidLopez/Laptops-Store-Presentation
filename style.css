@@ -1,16 +1,88 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: "OSC";
+    src: url("fonts/OpenSansCondensed-Light.ttf");
+}
 body{
     margin: 0px;
     padding: 0px;
-    background: linear-gradient(to left bottom, rgb(66, 66, 66) , rgb(240, 240, 240));
+    background: linear-gradient(to left bottom, rgb(230, 230, 230) 5%, rgb(255, 255, 255));
     height: 100vh;
+    font-family: "Poppins", Helvetica, sans-serif;
+    font-size: 15px;
 }
-body img{
+header{
+    width: 92vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5vh 4vw;
+}
+.store_brand{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    align-items: center;
+}
+.store_logo{
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    opacity: 0.9;
+}
+.brand_tittle{
+    width: max-content;
+    font-family: "OSC" , Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 19px;
+    letter-spacing: 0.4px;
+    margin: 0px 0px 0px 10px;
+}
+header ul{
+    display: grid;
+    grid-template-columns: repeat(4,max-content);
+    gap: 30px;
+}
+header ul li{
+    list-style: none;
+}
+
+
+
+.brand_logo{
+    width: 100px;
+}
+.circles{
+    width: 370px;
+    height: 340px;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    filter: blur(55px);
+}
+.circle1{
+    background: linear-gradient(to left bottom, #1eadf080, #0afb5e81);
+    top: 37vh;
+    left: 38vw;
+}
+.circle2{
+    background: linear-gradient(to right top, #00ffee81, #4500c66e);
+    top: 23vh;
+    left: 45vw;
+}
+.laps{
+    position: absolute;
     pointer-events: none;
-    height: 30vh;
+    height: 450px;
+    display: none;
+    z-index: 3;
+    top: 28vh;
+    left: 41vw;
 }
 .lap01{
     transform: rotate(10deg);
-    border: 1px solid red;
+    display: block;
 }
 .lap02{
     border: 1px solid red;
