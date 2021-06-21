@@ -54,16 +54,28 @@ header ul li a{
     font-size: 15.5px;
     letter-spacing: 0.4px;
 }
-
 .product_details{
     width: 30vw;
     position:absolute;
     top: 23vh;
     left: 4vw;
 }
-
-.brand_logo{
-    width: 100px;
+.product_details .brand_logo{
+    width: 70px;
+}
+.product_details h1{
+    margin: -4px 0px 8px;
+    font-size: 28px;
+    letter-spacing: 0.8px;
+}
+.product_details .price{
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 0.7px;
+}
+.product_details .description1, .product_details .description2{
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
 .circles{
     width: 370px;
