@@ -4,27 +4,26 @@ body{
     background: linear-gradient(to left bottom, rgb(66, 66, 66) , rgb(240, 240, 240));
     height: 100vh;
 }
-.lap01{
+body img{
+    pointer-events: none;
     height: 30vh;
+}
+.lap01{
     transform: rotate(10deg);
     border: 1px solid red;
 }
 .lap02{
-    height: 30vh;
     border: 1px solid red;
 }
 .lap03{
-    height: 30vh;
     transform: rotate(340deg);
     border: 1px solid red;
 }
 .lap04{
-    height: 30vh;
     transform: rotate(345deg);
     border: 1px solid red;
 }
 .lap05{
-    height: 30vh;
     transform: scaleX(-1) rotate(7deg);
     border: 1px solid red;
 }

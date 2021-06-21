@@ -1,18 +1,26 @@
 {"data" : [
     {
-
+        "brand_route" : "img/",
+        "tittle" : "Asus A15 Ryzen 7 4800h Gtx 1660 Ti 16g 144h Portatil Gamer",
+        "price" : "$5.199.999",
+        "description" : "",
+        "route" : "img/Laptop01.png"
     },
     {
-
+        "tittle" : "Laptop 1",
+        "route" : "img/Laptop02.png"
     },
     {
-
+        "tittle" : "Laptop 1",
+        "route" : "img/Laptop03.png"
     },
     {
-
+        "tittle" : "Laptop 1",
+        "route" : "img/Laptop04.png"
     },
     {
-
+        "tittle" : "Laptop 1",
+        "route" : "img/Laptop05.png"
     }
 ]
 }
