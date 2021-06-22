@@ -1,6 +1,42 @@
 var elementToChange = document.getElementsByTagName("body")[0];
 var pointer_left = document.querySelector('.arrow_left');
 var pointer_right = document.querySelector('.arrow_right');
+var brand_logo = document.querySelector(".brand_logo");
+var tittle = document.querySelector(".tittle");
+var price = document.querySelector(".price");
+var description1 = document.querySelector(".description1");
+var description2 = document.querySelector(".description2");
+var actual_image = document.querySelector(".actual");
+var position_actual = 0;
+function loadJSON(path, success, error)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function()
+    {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                if (success)
+                    success(JSON.parse(xhr.responseText));
+            } else {
+                if (error)
+                    error(xhr);
+            }
+        }
+    };
+    xhr.open("GET", path, true);
+    xhr.send();
+}
+loadJSON('data.json',
+    function(data) { 
+        brand_logo.src = data[0].brand_route;
+        tittle.textContent = data[0].tittle;
+        price.textContent = data[0].price;
+        description1.textContent = data[0].description_1;
+        description2.textContent = data[0].description_2;
+        actual_image.src = data[0].route;
+     },
+    function(xhr) { console.error(xhr); }
+);
 document.querySelector('body').addEventListener('mousemove', (event)=>{
     x = event.pageX;
     y = event.pageY;
@@ -38,6 +74,23 @@ document.querySelector('body').addEventListener('click', (event)=>{
                 pointer_left.style.transition = 'none';
             }, 80);
         }, 130);
+        //Slide to Left
+        loadJSON('data.json',
+            function(data) {
+                if (position_actual > 0) {
+                    position_actual -= 1;
+                    let s = position_actual;
+                    console.log(position_actual)
+                    brand_logo.src = data[s].brand_route;
+                    tittle.textContent = data[s].tittle;
+                    price.textContent = data[s].price;
+                    description1.textContent = data[s].description_1;
+                    description2.textContent = data[s].description_2;
+                    actual_image.src = data[s].route;
+                }
+            },
+            function(xhr) { console.error(xhr); }
+        );
     } else {
         if (x>=(tamañox/2)) {
             pointer_right.classList = ('arrow_right_clicked')
@@ -48,6 +101,23 @@ document.querySelector('body').addEventListener('click', (event)=>{
                     pointer_right.style.transition = 'none';
                 }, 80);
             }, 130);
+            //Slide to Right
+            loadJSON('data.json',
+            function(data) {
+                if (position_actual < data.length-1) {
+                    position_actual += 1;
+                    let s = position_actual;
+                    console.log(position_actual)
+                    brand_logo.src = data[s].brand_route;
+                    tittle.textContent = data[s].tittle;
+                    price.textContent = data[s].price;
+                    description1.textContent = data[s].description_1;
+                    description2.textContent = data[s].description_2;
+                    actual_image.src = data[s].route;
+                }
+            },
+            function(xhr) { console.error(xhr); }
+            );
         }
     }
     
