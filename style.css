@@ -6,19 +6,24 @@
     font-family: "OSC";
     src: url("fonts/OpenSansCondensed-Light.ttf");
 }
+html{
+    background: red;
+}
 body{
     margin: 0px;
     padding: 0px;
+    min-height: 100vh;
     background: linear-gradient(to left bottom, rgb(230, 230, 230) 5%, rgb(255, 255, 255));
-    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
     font-family: "Poppins", Helvetica, sans-serif;
     font-size: 15px;
 }
-header{
-    width: 92vw;
+.header{
+    min-width: max-content;
     display: flex;
     justify-content: space-between;
-    padding: 2.5vh 4vw;
+    padding: 25px 4%;
 }
 .store_brand{
     display: grid;
@@ -39,15 +44,15 @@ header{
     letter-spacing: 0.4px;
     margin: 0px 0px 0px 10px;
 }
-header ul{
+.header ul{
     display: grid;
     grid-template-columns: repeat(4,max-content);
     gap: 30px;
 }
-header ul li{
+.header ul li{
     list-style: none;
 }
-header ul li a{
+.header ul li a{
     text-decoration: none;
     color: black;
     font-weight: 600;
@@ -55,10 +60,11 @@ header ul li a{
     letter-spacing: 0.4px;
 }
 .product_details{
-    width: 30vw;
-    position:absolute;
-    top: 23vh;
-    left: 4vw;
+    width: 30%;
+    position:relative;
+    margin-top: 10vh;
+    padding-bottom: 50px;
+    left: 4%;
 }
 .product_details .brand_logo{
     width: 80px;
@@ -77,6 +83,7 @@ header ul li a{
     font-size: 15px;
     letter-spacing: 0.5px;
 }
+
 .product_details .explore_product{
     font-weight: bold;
 }
@@ -101,10 +108,10 @@ header ul li a{
 .laps{
     position: absolute;
     pointer-events: none;
-    height: 550px;
+    height: 520px;
     display: none;
     z-index: 3;
-    top: 23vh;
+    top: 20vh;
     left: 41vw;
 }
 .lap01{
@@ -127,16 +134,22 @@ header ul li a{
     
 }
 .counter{
-    position: absolute;
-    bottom: 15vh;
-    right: 15vw;
-    font-size:18px;
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 5%;
+    font-size:21px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.counter span{
     font-weight: bold;
+    font-size: 25px;
 }
 .personal_data{
+    display: none;
     position: absolute;
-    bottom: 3vh;
-    left: 4vw;
+    bottom: 50px;
+    left: 3%;
     letter-spacing: 0.5px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5);
@@ -144,4 +157,21 @@ header ul li a{
 .personal_data span{
     color: rgb(218, 0, 0);
     opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+    .circles{
+        width: 310px;
+        height: 310px;
+        position: absolute;
+        border-radius: 50%;
+        z-index: 1;
+        filter: blur(55px);
+    }
+    .laps{
+        height: 400px;
+    }
+}
+@media (max-width: 665px) {
+    
 }
