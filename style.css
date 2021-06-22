@@ -6,13 +6,11 @@
     font-family: "OSC";
     src: url("fonts/OpenSansCondensed-Light.ttf");
 }
-html{
-    background: red;
-}
 body{
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
+    min-width: 100%;
     background: linear-gradient(to left bottom, rgb(230, 230, 230) 5%, rgb(255, 255, 255));
     background-repeat: no-repeat;
     background-size: 100%;
@@ -109,7 +107,7 @@ body{
     position: absolute;
     pointer-events: none;
     height: 520px;
-    display: none;
+    display: block;
     z-index: 3;
     top: 20vh;
     left: 41vw;
@@ -147,7 +145,7 @@ body{
 .personal_data{
     position: absolute;
     bottom: 50px;
-    left: 3%;
+    left: 4%;
     letter-spacing: 0.5px;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.5);
@@ -170,6 +168,9 @@ body{
         height: 400px;
     }
 }
-@media (max-width: 665px) {
+@media (max-width: 700px) {
+    body{
+    background: rgb(238, 238, 238);
     
+    }
 }
