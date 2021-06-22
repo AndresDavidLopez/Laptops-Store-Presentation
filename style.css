@@ -181,6 +181,42 @@ body{
     filter: blur(6px);
     opacity: 0.1;
 }
+.arrow_left{
+    position: absolute;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    fill: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 50% 50% 50% 50%;
+    z-index: 2147483648;
+}
+.arrow_right{
+    position: absolute;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    fill: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border-radius: 50% 50% 50% 50%;;
+    z-index: 2147483648;
+}
+.arrow_left_clicked{
+    position: absolute;
+    border: 2px solid rgba(0, 0, 0, 0.0);
+    opacity: 0.1;
+    fill: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    transform: scale(1.1);
+    border-radius: 50% 50% 50% 50%;
+    z-index: 2147483648;
+}
+.arrow_right_clicked{
+    position: absolute;
+    border: 2px solid rgba(0, 0, 0, 0.0);
+    opacity: 0.1;
+    fill: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+    padding: 15px;
+    border-radius: 50% 50% 50% 50%;;
+    z-index: 2147483648;
+}
 @media (max-width: 950px) {
     .circles{
         width: 310px;
