@@ -143,18 +143,25 @@ body{
     font-size: 25px;
 }
 .personal_data{
-    position: absolute;
-    bottom: 50px;
+    position: relative;
     left: 4%;
     letter-spacing: 0.5px;
+    align-content:space-between;
     font-size: 14px;
+    padding-bottom: 40px;
     color: rgba(0, 0, 0, 0.5);
+    width: max-content;
+    float:inline-end;
 }
 .personal_data span{
     color: rgb(218, 0, 0);
     opacity: 0.8;
 }
-
+@media (max-width:1500px) {
+    .personal_data{
+        
+    }
+}
 @media (max-width: 900px) {
     .circles{
         width: 310px;
