@@ -87,7 +87,7 @@ document.querySelector('body').addEventListener('click', (event)=>{
                         description1.textContent = data[s].description_1;
                         description2.textContent = data[s].description_2;
                         actual_image.src = data[s].route;
-                    }, 500);
+                    }, 300);
                 }
             },
             function(xhr) { console.error(xhr); }
@@ -117,7 +117,7 @@ document.querySelector('body').addEventListener('click', (event)=>{
                         description1.textContent = data[s].description_1;
                         description2.textContent = data[s].description_2;
                         actual_image.src = data[s].route; 
-                    }, 5000);
+                    }, 300);
                 }
             },
             function(xhr) { console.error(xhr); }
@@ -157,8 +157,47 @@ function textAnimationOut(){
 }
 function textAnimationIn(){
     setTimeout(() => {
-        //brand_logo.style.transition = "all 0s";
-        //brand_logo.style.margin = "0 0 0 0";
-        //brand_logo.style.opacity = "1";
-    },530);
+        brand_logo.style.transition = "all 0s";
+        brand_logo.style.transform = "translate(0,180px)";
+        setTimeout(() => {
+            brand_logo.style.transition = "all 0.17s linear";
+            brand_logo.style.opacity = "1";
+            brand_logo.style.transform = "translate(0,0px)";
+            tittle.style.transition = "all 0s";
+            tittle.style.transform = "translate(0,180px)";
+            setTimeout(() => {
+                tittle.style.transition = "all 0.17s linear";
+                tittle.style.opacity = "1";
+                tittle.style.transform = "translate(0,0px)";
+                price.style.transition = "all 0s";
+                price.style.transform = "translate(0,180px)";
+                setTimeout(() => {
+                    price.style.transition = "all 0.17s linear";
+                    price.style.opacity = "1";
+                    price.style.transform = "translate(0,0px)";
+                    description1.style.transition = "all 0s";
+                    description1.style.transform = "translate(0,180px)";
+                    setTimeout(() => {
+                        description1.style.transition = "all 0.17s linear";
+                        description1.style.opacity = "1";
+                        description1.style.transform = "translate(0,0px)";
+                        description2.style.transition = "all 0s";
+                        description2.style.transform = "translate(0,180px)";
+                        setTimeout(() => {
+                            description2.style.transition = "all 0.17s linear";
+                            description2.style.opacity = "1";
+                            description2.style.transform = "translate(0,0px)";
+                            explore_product.style.transition = "all 0s";
+                            explore_product.style.transform = "translate(0,180px)";
+                            setTimeout(() => {
+                                explore_product.style.transition = "all 0.17s linear";
+                                explore_product.style.opacity = "1";
+                                explore_product.style.transform = "translate(0,0px)";
+                            },70);
+                        },60);
+                    },50);
+                },40);
+            },30); 
+        },20);
+    },700);
 }
