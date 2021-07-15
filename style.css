@@ -68,6 +68,10 @@ body{
 }
 .product_details .brand_logo{
     width: 80px;
+    position: relative;
+}
+.brand_logo, .tittle, .price, .description1, .description2{
+    position: relative;
 }
 .product_details h1{
     margin: -2px 0px 10px;

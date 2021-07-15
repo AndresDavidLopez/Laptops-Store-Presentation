@@ -6,7 +6,9 @@ var tittle = document.querySelector(".tittle");
 var price = document.querySelector(".price");
 var description1 = document.querySelector(".description1");
 var description2 = document.querySelector(".description2");
+var explore_product = document.querySelector(".explore_product");
 var actual_image = document.querySelector(".actual");
+var product_details = document.querySelector(".product_details");
 var position_actual = 0;
 function loadJSON(path, success, error)
 {
@@ -41,10 +43,6 @@ document.querySelector('body').addEventListener('mousemove', (event)=>{
     x = event.pageX;
     y = event.pageY;
     var tamañox = window.innerWidth;
-    if (elementToChange.style.cursor == "none") {
-        pointer_right.style.display = "none";
-        pointer_left.style.display = "none";
-    }
     if (x<(tamañox/2)) {
         //elementToChange.style.cursor = "none";
         pointer_right.style.display = "none";
@@ -78,15 +76,18 @@ document.querySelector('body').addEventListener('click', (event)=>{
         loadJSON('data.json',
             function(data) {
                 if (position_actual > 0) {
-                    position_actual -= 1;
-                    let s = position_actual;
-                    console.log(position_actual)
-                    brand_logo.src = data[s].brand_route;
-                    tittle.textContent = data[s].tittle;
-                    price.textContent = data[s].price;
-                    description1.textContent = data[s].description_1;
-                    description2.textContent = data[s].description_2;
-                    actual_image.src = data[s].route;
+                    textAnimationOut();
+                    textAnimationIn();
+                    setTimeout(() => {
+                        position_actual -= 1;
+                        let s = position_actual;
+                        brand_logo.src = data[s].brand_route;
+                        tittle.textContent = data[s].tittle;
+                        price.textContent = data[s].price;
+                        description1.textContent = data[s].description_1;
+                        description2.textContent = data[s].description_2;
+                        actual_image.src = data[s].route;
+                    }, 500);
                 }
             },
             function(xhr) { console.error(xhr); }
@@ -105,20 +106,59 @@ document.querySelector('body').addEventListener('click', (event)=>{
             loadJSON('data.json',
             function(data) {
                 if (position_actual < data.length-1) {
-                    position_actual += 1;
-                    let s = position_actual;
-                    console.log(position_actual)
-                    brand_logo.src = data[s].brand_route;
-                    tittle.textContent = data[s].tittle;
-                    price.textContent = data[s].price;
-                    description1.textContent = data[s].description_1;
-                    description2.textContent = data[s].description_2;
-                    actual_image.src = data[s].route;
+                    textAnimationOut();
+                    textAnimationIn();
+                    setTimeout(() => {
+                        position_actual += 1;
+                        let s = position_actual;
+                        brand_logo.src = data[s].brand_route;
+                        tittle.textContent = data[s].tittle;
+                        price.textContent = data[s].price;
+                        description1.textContent = data[s].description_1;
+                        description2.textContent = data[s].description_2;
+                        actual_image.src = data[s].route; 
+                    }, 5000);
                 }
             },
             function(xhr) { console.error(xhr); }
             );
         }
     }
-    
 })
+function textAnimationOut(){
+    brand_logo.style.transition = "all 0.17s linear";
+    brand_logo.style.opacity = "0";
+    brand_logo.style.transform = "translate(0,-180px)";
+    setTimeout(() => {
+        tittle.style.transition = "all 0.17s linear";
+        tittle.style.opacity = "0";
+        tittle.style.transform = "translate(0,-180px)";
+        setTimeout(() => {
+            price.style.transition = "all 0.17s linear";
+            price.style.opacity = "0";
+            price.style.transform = "translate(0,-180px)";
+            setTimeout(() => {
+                description1.style.transition = "all 0.17s linear";
+                description1.style.opacity = "0";
+                description1.style.transform = "translate(0,-180px)";
+                setTimeout(() => {
+                    description2.style.transition = "all 0.17s linear";
+                    description2.style.opacity = "0";
+                    description2.style.transform = "translate(0,-180px)";
+                    setTimeout(() => {
+                        explore_product.style.transition = "all 0.17s linear";
+                        explore_product.style.opacity = "0";
+                        explore_product.style.transform = "translate(0,-180px)";
+                    }, 30);
+                }, 40);
+            }, 50);
+        }, 60);
+    }, 70);
+}
+function textAnimationIn(){
+    setTimeout(() => {
+        //brand_logo.style.transition = "all 0s";
+        //brand_logo.style.margin = "0 0 0 0";
+        //brand_logo.style.opacity = "1";
+    },530);
+}
