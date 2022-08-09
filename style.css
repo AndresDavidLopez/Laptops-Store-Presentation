@@ -3,10 +3,10 @@
     src: url("fonts/Poppins-Regular.ttf");
 }
 @font-face {
-    font-family: "OSC";
-    src: url("fonts/OpenSansCondensed-Light.ttf");
+    font-family: "LibreFranklin";
+    src: url("fonts/LibreFranklin.ttf");
 }
-body{
+/* body{
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
@@ -37,10 +37,10 @@ body{
 }
 .brand_tittle{
     width: max-content;
-    font-family: "OSC" , Helvetica, sans-serif;
+    font-family: "LibreFranklin" , Helvetica, sans-serif;
     font-weight: bold;
     font-size: 21px;
-    letter-spacing: 0.4px;
+    letter-spacing: 0px;
     margin: 0px 0px 0px 10px;
 }
 .header ul{
@@ -246,4 +246,4 @@ body{
     background: rgb(238, 238, 238);
     
     }
-}
+} */
