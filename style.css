@@ -196,7 +196,7 @@ body{
 .arrow_right{
     position: absolute;
     border: 2px solid rgba(0, 0, 0, 0.5);
-    fill: rgba(0, 0, 0, 0.7);
+    fill: rgba(0, 0, 0, 0.71);
     padding: 8px;
     border-radius: 50% 50% 50% 50%;;
     z-index: 2147483648;
