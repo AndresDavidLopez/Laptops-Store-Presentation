@@ -8,8 +8,6 @@ var description1 = document.querySelector(".description1");
 var description2 = document.querySelector(".description2");
 var explore_product = document.querySelector(".explore_product");
 var actual_image = document.querySelector(".actual");
-var last_image = document.querySelector(".last");
-var next_image = document.querySelector(".next");
 var product_details = document.querySelector(".product_details");
 var position_actual = 0;
 function loadJSON(path, success, error)
@@ -38,8 +36,6 @@ loadJSON('data.json',
         description1.textContent = data[0].description_1;
         description2.textContent = data[0].description_2;
         actual_image.src = data[0].route;
-        next_image.src = data[1].route;
-        last_image.src = "";
      },
     function(xhr) { console.error(xhr); }
 );
@@ -62,7 +58,7 @@ document.querySelector('body').addEventListener('mousemove', (event)=>{
             pointer_right.style.left = x+1;
         }
     }
-});
+})
 document.querySelector('body').addEventListener('click', (event)=>{
     x = event.pageX;
     y = event.pageY;
@@ -90,8 +86,8 @@ document.querySelector('body').addEventListener('click', (event)=>{
                         price.textContent = data[s].price;
                         description1.textContent = data[s].description_1;
                         description2.textContent = data[s].description_2;
-                        actual_image.src = data[s].route;console.log(s)
-                    }, 350);
+                        actual_image.src = data[s].route;
+                    }, 300);
                 }
             },
             function(xhr) { console.error(xhr); }
@@ -112,7 +108,6 @@ document.querySelector('body').addEventListener('click', (event)=>{
                 if (position_actual < data.length-1) {
                     textAnimationOut();
                     textAnimationIn();
-                    laptopsAnimation(position_actual);
                     setTimeout(() => {
                         position_actual += 1;
                         let s = position_actual;
@@ -121,7 +116,8 @@ document.querySelector('body').addEventListener('click', (event)=>{
                         price.textContent = data[s].price;
                         description1.textContent = data[s].description_1;
                         description2.textContent = data[s].description_2;
-                    }, 350);
+                        actual_image.src = data[s].route; 
+                    }, 300);
                 }
             },
             function(xhr) { console.error(xhr); }
@@ -204,52 +200,4 @@ function textAnimationIn(){
             },30); 
         },20);
     },700);
-}
-function laptopsAnimation(position){
-    loadJSON('data.json',
-    function(data) {
-        position = position + 1;
-        var actual_image = document.querySelector(".actual");
-        var last_image = document.querySelector(".last");
-        var next_image = document.querySelector(".next");
-        actual_image.style.transition = "all 0.26s linear";
-        actual_image.classList = "laps lap02 last";
-        actual_image.style.opacity = "0";
-        next_image.style.transition = "all 0.26s linear";
-        next_image.classList = "laps lap02 actual";
-        last_image.style.transition = "all 0.26s linear";
-        last_image.classList = "laps lap01 next";
-        
-        console.log(position);
-        var next_image = document.querySelector(".next");
-        setTimeout(() => {
-            next_image.src = data[position+1].route;
-            
-        }, 400);
-        var last_image = document.querySelector(".last");
-        setTimeout(() => {
-            last_image.style.display = "none";
-        }, 400);
-        
-    }, function(xhr) { console.error(xhr); }
-    );
-}
-
-function laptopsAnimation2(position){
-    position = position+1;
-    loadJSON('data.json',
-    function(data) {
-        for (let i = 0; i < data.length; i++) {
-            
-            console.log(i);
-        }
-        
-
-    }, function(xhr) { console.error(xhr); }
-    );
-    
-    
-}
-function lastLaptop(){
-
 }
